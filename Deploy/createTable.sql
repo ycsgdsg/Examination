@@ -5,7 +5,7 @@ drop table if exists Examination.participant;
 CREATE  TABLE `examination`.`participant` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `id_number` BIGINT NOT NULL ,
-  `name` VARCHAR(45) NULL ,
+  `name` VARCHAR(256) NULL ,
   `question_id` BIGINT NULL ,
   `answer_id` BIGINT NULL ,
   PRIMARY KEY (`id`) );
@@ -15,6 +15,7 @@ CREATE TABLE Examination.question (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `description` VARCHAR(10240) NULL ,
   `answer_template` VARCHAR(10240) NULL ,
+  `method` VARCHAR(256) NULL ,
   PRIMARY KEY (`id`) );
 
 drop table if exists Examination.answer;

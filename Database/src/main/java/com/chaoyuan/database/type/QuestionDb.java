@@ -6,6 +6,7 @@ package com.chaoyuan.database.type;
 public class QuestionDB extends BaseDB {
     private String description;
     private String answerTemplate;
+    private String method;
 
     public String getDescription() {
         return description;
@@ -21,5 +22,13 @@ public class QuestionDB extends BaseDB {
 
     public void setAnswerTemplate(String answerTemplate) {
         this.answerTemplate = answerTemplate;
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
     }
 }

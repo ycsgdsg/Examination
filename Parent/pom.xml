@@ -101,10 +101,10 @@
 	</dependencyManagement>
 
     <properties>
-        <base.version>1.0-SNAPSHOT</base.version>
-        <database.version>${base.version}</database.version>
-        <identity.version>${base.version}</identity.version>
-		<spring.base.version>${base.version}</spring.base.version>
+        <app.version>1.0-SNAPSHOT</app.version>
+        <database.version>${app.version}</database.version>
+        <identity.version>${app.version}</identity.version>
+		<spring.base.version>${app.version}</spring.base.version>
 
         <spring.version>4.2.2.RELEASE</spring.version>
         <mysql.version>5.1.34</mysql.version>

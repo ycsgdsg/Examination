@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
 	<groupId>com.chaoyuan</groupId>
     <artifactId>SpringBase</artifactId>
-	<version>${base.version}</version>
+	<version>${app.version}</version>
     <packaging>jar</packaging>
 	
 		<dependencies>
