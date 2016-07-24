@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+
+    <bean id="participantMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.chaoyuan.database.mapper.ParticipantMapper"/>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+
+    <bean id="participantMysqlDao" class="com.chaoyuan.database.dao.impl.ParticipantDaoMysqlImpl">
+        <property name="mapper" ref="participantMapper" />
+    </bean>
+
+    <bean id="questionMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.chaoyuan.database.mapper.QuestionMapper"/>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+
+    <bean id="questionMysqlDao" class="com.chaoyuan.database.dao.impl.QuestionDaoMysqlImpl">
+        <property name="mapper" ref="questionMapper" />
+    </bean>
+
+    <bean id="answerMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.chaoyuan.database.mapper.AnswerMapper"/>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+
+    <bean id="answerMysqlDao" class="com.chaoyuan.database.dao.impl.AnswerDaoMysqlImpl">
+        <property name="mapper" ref="answerMapper" />
+    </bean>
+
+</beans>

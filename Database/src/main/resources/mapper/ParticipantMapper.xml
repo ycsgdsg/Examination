@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chaoyuan.database.mapper.ParticipantMapper">
+
+    <resultMap id="BaseResultMap" type="com.chaoyuan.database.type.ParticipantDB">
+        <id column="ID" property="id" />
+        <result column="ID_NUMNER" property="IDNumber" />
+        <result column="NAME" property="name" />
+        <result column="QUESTION_ID" property="questionId" />
+        <result column="ANSWER_ID" property="answerId" />
+    </resultMap>
+
+    <sql id="columns">
+        ID,
+        ID_NUMBER,
+        NAME,
+        QUESTION_ID,
+        ANSWER_id
+    </sql>
+
+    <sql id="columnsWithoutId">
+      ID_NUMBER,
+      NAME,
+      QUESTION_ID,
+      ANSWER_ID
+    </sql>
+
+    <sql id="values">
+        #{entity.IDNumber},
+        #{entity.name},
+        #{entity.questionId},
+        #{entity.answerId}
+    </sql>
+
+    <sql id="updateValues">
+        ID_NUMBER = #{entity.IDNumber},
+        NAME = #{entity.name},
+        QUESTION_ID = #{entity.questionId},
+        ANSWER_ID = #{entity.answerId}
+    </sql>
+
+    <select id="get" resultMap="BaseResultMap">
+        SELECT
+        <include refid="columns"/>
+        FROM Participant WHERE id = #{id}
+    </select>
+
+    <select id="getByIDNumber" parameterType="com.chaoyuan.database.type.ParticipantDB" resultMap="BaseResultMap">
+        SELECT
+        <include refid="columns"/>
+        from Participant WHERE ID_NUMBER = #{entity.IDNumber}
+    </select>
+
+    <insert id="save" parameterType="com.chaoyuan.database.type.ParticipantDB" useGeneratedKeys="true" keyProperty="entity.id" keyColumn="id">
+        INSERT INTO Participant
+        (
+        <include refid="columnsWithoutId"/>
+        )
+        VALUES
+        (
+        <include refid="values"/>
+        )
+    </insert>
+
+    <update id="update" parameterType="com.chaoyuan.database.type.ParticipantDB">
+        UPDATE Participant SET
+        <include refid="updateValues"/>
+        WHERE id=#{entity.id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM Participant WHERE id=#{id}
+    </delete>
+
+</mapper>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chaoyuan.database.mapper.AnswerMapper">
+
+    <resultMap id="BaseResultMap" type="com.chaoyuan.database.type.AnswerDB">
+        <id column="ID" property="id" />
+        <result column="ANSWER" property="answer" />
+    </resultMap>
+
+    <sql id="columns">
+        ID,
+        ANSWER
+    </sql>
+
+    <sql id="columnsWithoutId">
+        ANSWER
+    </sql>
+
+    <sql id="values">
+        #{entity.answer}
+    </sql>
+
+    <sql id="updateValues">
+        ANSWER = #{entity.answer}
+    </sql>
+
+    <select id="get" resultMap="BaseResultMap">
+        SELECT
+        <include refid="columns"/>
+        FROM answer WHERE id = #{id}
+    </select>
+
+    <insert id="save" parameterType="com.chaoyuan.database.type.AnswerDB" useGeneratedKeys="true" keyProperty="entity.id" keyColumn="id">
+        INSERT INTO answer
+        (
+        <include refid="columnsWithoutId"/>
+        )
+        VALUES
+        (
+        <include refid="values"/>
+        )
+    </insert>
+
+    <update id="update" parameterType="com.chaoyuan.database.type.AnswerDB">
+        UPDATE answer SET
+        <include refid="updateValues"/>
+        WHERE id=#{entity.id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM answer WHERE id=#{id}
+    </delete>
+
+</mapper>
