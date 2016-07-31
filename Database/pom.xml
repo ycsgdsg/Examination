@@ -27,7 +27,7 @@
         <dependency>
             <groupId>com.chaoyuan</groupId>
             <artifactId>SpringBase</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${app.version}</version>
         </dependency>
     </dependencies>
 

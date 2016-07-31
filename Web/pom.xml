@@ -11,14 +11,6 @@
     <packaging>war</packaging>
     <name>Web</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.chaoyuan</groupId>
-            <artifactId>Identity</artifactId>
-            <version>${identity.version}</version>
-        </dependency>
-    </dependencies>
-
     <build>
         <finalName>Web</finalName>
     </build>
