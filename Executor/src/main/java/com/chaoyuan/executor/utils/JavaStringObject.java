@@ -1,4 +1,4 @@
-package com.chaoyuan.executor;
+package com.chaoyuan.executor.utils;
 
 import javax.tools.JavaFileObject;
 import javax.tools.SimpleJavaFileObject;

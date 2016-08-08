@@ -1,28 +1,19 @@
-package com.chaoyuan.executor.impl;
+package com.chaoyuan.executor.cases;
 
-import com.chaoyuan.executor.Executor;
-
-import java.lang.reflect.Method;
+import com.chaoyuan.executor.judger.cases.JudgeTwoSum;
+import org.testng.annotations.Test;
 
 /**
- * Created by ycsgd on 2016/7/31.
+ * Created by chaoyuan on 08/08/2016.
  */
-public class TwoSumExecutor extends Executor {
+public class TestTwoSumJudger {
 
-    public TwoSumExecutor(String classname, String content) throws Exception {
-        super(classname, content);
-    }
-
-    @Override
-    public Method getMethod() throws Exception {
-        Class cla = Class.forName(getClassname());
-        Method method = cla.getMethod("twoSum", int[].class, int.class);
-        return method;
-    }
-
-    public static void main(String[] args) throws Exception {
-        String source =
-                        "package com.chaoyuan.solution;\n" +
+    @Test
+    public void testForNull() throws Exception {
+        String classname = "com.beyondsoft.solution.abc.TwoSum";
+        String packageName = classname.substring(0, classname.lastIndexOf("."));
+        String content =
+                "package " + packageName + ";\n" +
                         "import java.util.ArrayList;\n" +
                         "import java.util.HashMap;\n" +
                         "import java.util.List;\n" +
@@ -80,12 +71,7 @@ public class TwoSumExecutor extends Executor {
                         "        }\n" +
                         "    }\n" +
                         "}\n";
-        String classname = "com.chaoyuan.solution.TwoSum";
-        TwoSumExecutor cu = new TwoSumExecutor(classname, source);
-        try {
-            Object result = cu.invoke(new Object[]{new int[]{1,2,3,4,5}, 6});
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        JudgeTwoSum tts = new JudgeTwoSum(classname, content);
+        tts.testForNull();
     }
 }
