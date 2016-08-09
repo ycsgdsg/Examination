@@ -13,6 +13,7 @@
         <module>SpringBase</module>
         <module>Database</module>
         <module>Executor</module>
+        <module>Controller</module>
         <module>Web</module>
         <module>deploy</module>
     </modules>

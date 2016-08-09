@@ -27,11 +27,6 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
 				<artifactId>spring-jdbc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
@@ -47,15 +42,9 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
-				<artifactId>spring-expression</artifactId>
+				<artifactId>spring-webmvc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-orm</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
@@ -79,15 +68,9 @@
 			</dependency>
 
 			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-webmvc</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-
-			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis-spring</artifactId>
-				<version>1.1.1</version>
+				<version>1.3.0</version>
 			</dependency>
 
 			<dependency>
@@ -95,6 +78,13 @@
 				<artifactId>ibatis-core</artifactId>
 				<version>3.0</version>
 			</dependency>
+
+			<dependency>
+				<groupId>org.apache.ibatis</groupId>
+				<artifactId>ibatis-sqlmap</artifactId>
+				<version>2.3.4.726</version>
+			</dependency>
+
 
 
 		</dependencies>
@@ -106,7 +96,7 @@
         <identity.version>${app.version}</identity.version>
 		<spring.base.version>${app.version}</spring.base.version>
 
-        <spring.version>4.2.2.RELEASE</spring.version>
+        <spring.version>4.3.2.RELEASE</spring.version>
         <mysql.version>5.1.34</mysql.version>
         <servlet.version>3.0-alpha-1</servlet.version>
         <testNG.version>6.1.1</testNG.version>

@@ -21,10 +21,6 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
 				<artifactId>spring-jdbc</artifactId>
 			</dependency>
 			<dependency>
@@ -34,18 +30,6 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-expression</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-orm</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-test</artifactId>
 			</dependency>
 
 			<dependency>
@@ -58,12 +42,16 @@
 				<artifactId>ibatis-core</artifactId>
 			</dependency>
 
+			<dependency>
+				<groupId>org.apache.ibatis</groupId>
+				<artifactId>ibatis-sqlmap</artifactId>
+			</dependency>
 
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
 			</dependency>
-	
+
 			<!--Servlet -->
 			<dependency>
 				<groupId>javax.servlet</groupId>

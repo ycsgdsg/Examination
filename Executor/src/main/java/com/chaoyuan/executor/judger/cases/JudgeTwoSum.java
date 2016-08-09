@@ -28,7 +28,7 @@ public class JudgeTwoSum {
         public void testForRegular() throws Exception {
                 int[] nums = new int[] {1, 2, 3, 4, 5};
                 int target = 6;
-                int[] expect = new int[] {1, 1};
+                int[] expect = new int[] {0, 4};
                 int[] actual = (int [])executor.execute(new Object[]{nums, target});
                 if (!JavaJudger.verify(expect, actual)) {
                         throw new Exception("\nExpect:\t" + Transformer.arrayToString(expect) + "\n" +

@@ -10,7 +10,20 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Deploy</artifactId>
+    <artifactId>Controller</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.chaoyuan</groupId>
+            <artifactId>Executor</artifactId>
+            <version>${app.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.chaoyuan</groupId>
+            <artifactId>Database</artifactId>
+            <version>${app.version}</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

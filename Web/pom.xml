@@ -14,4 +14,12 @@
     <build>
         <finalName>Web</finalName>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.chaoyuan</groupId>
+            <artifactId>Controller</artifactId>
+            <version>${app.version}</version>
+        </dependency>
+    </dependencies>
 </project>
