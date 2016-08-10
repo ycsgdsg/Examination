@@ -41,7 +41,7 @@
 
     <!--servlet配置-->
     <servlet>
-        <servlet-name>identityServlet</servlet-name>
+        <servlet-name>webServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -49,7 +49,7 @@
         </init-param>
     </servlet>
     <servlet-mapping>
-        <servlet-name>identityServlet</servlet-name>
-        <url-pattern>/user/*</url-pattern>
+        <servlet-name>webServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
 </web-app>

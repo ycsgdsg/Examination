@@ -47,11 +47,9 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
-				<artifactId>spring-test</artifactId>
+				<artifactId>spring-context-support</artifactId>
 				<version>${spring.version}</version>
-				<scope>test</scope>
 			</dependency>
-
 
 			<!--Mysql -->
 			<dependency>
@@ -67,22 +65,31 @@
 				<version>${servlet.version}</version>
 			</dependency>
 
+			<!-- mybatis -->
+
 			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis-spring</artifactId>
-				<version>1.3.0</version>
+				<version>1.1.1</version>
 			</dependency>
 
 			<dependency>
-				<groupId>org.apache.ibatis</groupId>
-				<artifactId>ibatis-core</artifactId>
-				<version>3.0</version>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>3.4.1</version>
+			</dependency>
+
+			<!-- log4j-->
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.17</version>
 			</dependency>
 
 			<dependency>
-				<groupId>org.apache.ibatis</groupId>
-				<artifactId>ibatis-sqlmap</artifactId>
-				<version>2.3.4.726</version>
+				<groupId>org.freemarker</groupId>
+				<artifactId>freemarker</artifactId>
+				<version>2.3.23</version>
 			</dependency>
 
 
@@ -96,7 +103,7 @@
         <identity.version>${app.version}</identity.version>
 		<spring.base.version>${app.version}</spring.base.version>
 
-        <spring.version>4.3.2.RELEASE</spring.version>
+        <spring.version>4.2.4.RELEASE</spring.version>
         <mysql.version>5.1.34</mysql.version>
         <servlet.version>3.0-alpha-1</servlet.version>
         <testNG.version>6.1.1</testNG.version>
