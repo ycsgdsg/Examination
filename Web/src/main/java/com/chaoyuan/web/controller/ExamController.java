@@ -11,12 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Created by chaoyuan on 08/09/2016.
+ * Created by chaoyuan on 08/19/2016.
  */
-
 @Controller
-@RequestMapping("/login")
-public class LoginController {
+@RequestMapping("/exam")
+public class ExamController {
 
     @Autowired
     private ParticipantService participantService;

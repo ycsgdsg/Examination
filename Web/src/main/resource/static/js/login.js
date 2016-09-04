@@ -1,12 +1,27 @@
 (function() {
     $(function () {
-        $('#host-tree').treeview({
-            data: getHostTree(),
-            backColor : '#F2F3F4'
+        $('#login').on('click', function() {
+            clickLoginButton();
         });
+        optimizeWindow();
     });
 
 })();
+
+function clickLoginButton() {
+    var $btn = $('#login');
+    var url = $btn.attr("url");
+    var formData = new Object();
+}
+
+function optimizeWindow() {
+    var browser_width  = $(document.body).width();
+    $("div.bg").css("width",browser_width);
+    $(window).resize(function() {
+        browser_width  = $(document.body).width();
+        $("div.bg").css("width",browser_width);
+    });
+}
 
 function getHostTree() {
     return  [
