@@ -7,7 +7,11 @@
     position: absolute;
 }
 
-
+html,body{
+    padding:0;
+    margin:0;
+    height:100%;
+}
 
 #loginPage {
     height: 100px;
@@ -18,9 +22,10 @@
 }
 
 #bg {
-    url(../images/logo.jpg);
-    -moz-background-size:100% 100%;
-    background-size:100% 100%;
+    background-image:url(../images/logo.jpg);
+    -moz-background-size:cover;
+    background-size:cover;
     repeat:no-repeat;
     height: 100%;
+    weight: 100%
 }

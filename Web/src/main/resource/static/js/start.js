@@ -1,6 +1,6 @@
 (function() {
     $(function () {
-        $('#login').on('click', function() {
+        $('#start').on('click', function() {
             clickLoginButton();
         });
         optimizeWindow();

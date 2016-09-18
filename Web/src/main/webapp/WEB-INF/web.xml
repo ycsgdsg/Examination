@@ -50,6 +50,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>webServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/exam/*</url-pattern>
     </servlet-mapping>
 </web-app>
