@@ -35,9 +35,9 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
-    <listener>
-        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-    </listener>
+    <!--<listener>-->
+        <!--<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>-->
+    <!--</listener>-->
 
     <!--servlet配置-->
     <servlet>
@@ -50,6 +50,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>webServlet</servlet-name>
-        <url-pattern>/exam/*</url-pattern>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
 </web-app>
