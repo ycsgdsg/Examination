@@ -16,13 +16,12 @@
                     <table width="85%"  border="0">
                         <tr>
                             <td width="24%" height="25" align="right">姓名: </td>
-                            <td colspan="2"><input id="username" type="text" placeholder="姓名" class="input" id="username"></td>
+                            <td colspan="2"><input id="username" type="text" placeholder="姓名" class="input"></td>
                             <td width="22%"></td>
                         </tr>
                         <tr>
                             <td height="25" align="right">身份证: </td>
-                            <td colspan="2"><input id="idNumber" type="text" placeholder="身份证号码" class="input" id="idNumber"></td>
-                            <td> </td>
+                            <td colspan="2"><input id="idNumber" type="text" placeholder="身份证号码" class="input"></td>
                         </tr>
                         <tr>
                             <td height="25"/>
